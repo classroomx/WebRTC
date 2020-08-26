@@ -1,1 +1,1 @@
-# WebRTC
+# WebRTC SDK for iRTC
