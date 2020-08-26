@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WebRTC4iRTC"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "WebRTC SDK for iRTC"
   s.description  = <<-DESC
     WebRTC is a free, open project that provides browsers and mobile
@@ -13,6 +13,10 @@ Pod::Spec.new do |s|
   s.author    = "Google Inc."
 
   s.platform     = :ios, "11.0"
+
+  s.pod_target_xcconfig = {
+      'ARCHS' =>'x86_64 arm64 arm64e'
+  }
 
   s.source_files = "WebRTC.framework/Headers/**/*.h"
   s.public_header_files = "WebRTC.framework/Headers/**/*.h"
