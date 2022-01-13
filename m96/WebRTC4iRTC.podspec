@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WebRTC4iRTC"
-  s.version      = "1.96.0"
+  s.version      = "1.96.2"
   s.summary      = "WebRTC SDK for iRTC"
   s.description  = <<-DESC
     WebRTC is a free, open project that provides browsers and mobile
@@ -16,5 +16,13 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
 
   s.vendored_frameworks = "*.framework"
+
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'ENABLE_BITCODE' => 'NO'
+  }
+  s.user_target_xcconfig = { 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
+  }
 
 end
